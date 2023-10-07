@@ -9,10 +9,10 @@ class Solution {
         int i = 0, j = arr.length-1;
         int len = arr.length;
         while(i<j) {
-            while(i<len && !(Character.isDigit(arr[i]) || Character.isLetter(arr[i]))) {
+            while(i<len && !Character.isLetterOrDigit(arr[i])) {
                 i++;
             }
-            while(j >=0 && !(Character.isDigit(arr[j]) || Character.isLetter(arr[j]))) {
+            while(j >=0 && !Character.isLetterOrDigit(arr[j])) {
                 j--;
             }
             if(i>=len || j<0) {
