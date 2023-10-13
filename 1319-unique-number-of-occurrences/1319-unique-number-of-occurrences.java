@@ -5,9 +5,12 @@ class Solution {
         for(int num : arr) {
             map.put(num, map.getOrDefault(num,0)+1);
         }
-        for(int num : map.values()){
-            set.add(num);
+        for(int num : map.values()) {
+            boolean pres = set.add(num);
+            if(!pres) {
+                return false;
+            }
         }
-        return map.size()==set.size();
+        return true;
     }
 }
