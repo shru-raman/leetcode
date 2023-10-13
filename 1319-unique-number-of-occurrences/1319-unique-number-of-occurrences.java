@@ -6,11 +6,8 @@ class Solution {
             map.put(num, map.getOrDefault(num,0)+1);
         }
         for(int num : map.values()){
-            boolean pres = set.add(num);
-            if(!pres) {
-                return false;
-            }
+            set.add(num);
         }
-        return true;
+        return map.size()==set.size();
     }
 }
