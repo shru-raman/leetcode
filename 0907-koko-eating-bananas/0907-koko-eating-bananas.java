@@ -20,10 +20,11 @@ class Solution {
     private boolean canEatAll(int[] piles, int k, int h) {
             long totalHours = 0;
             for(int i = 0;i<piles.length;i++){
-                totalHours = totalHours + piles[i] / k;
+                long hours = piles[i] / k;
                 if(piles[i]%k>0){
-                    totalHours++;
+                    hours++;
                 }
+                totalHours = totalHours + hours;
             }
         return totalHours<=h;
     }
