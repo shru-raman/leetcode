@@ -1,7 +1,9 @@
 class Solution {
     public int majorityElement(int[] nums) {
-        int mid = nums.length/2;
+        if(nums.length<=2){
+            return nums[0];
+        }
         Arrays.sort(nums);
-        return nums[mid];
+        return nums[nums.length/2];
     }
 }
